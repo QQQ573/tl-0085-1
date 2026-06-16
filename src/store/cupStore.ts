@@ -56,8 +56,9 @@ export const CUP_PRESETS: CupPreset[] = [
     cupBottomRadius: 30,
     layers: [
       { id: 's1', name: '浓缩咖啡', height: 35, color: '#3D2314', type: 'tea' },
-      { id: 's2', name: '牛奶', height: 60, color: '#FFF8DC', type: 'milk' },
-      { id: 's3', name: '奶泡', height: 20, color: '#FAEBD7', type: 'foam' },
+      { id: 's2', name: '牛奶', height: 55, color: '#FFF8DC', type: 'milk' },
+      { id: 's-ice', name: '冰块', height: 30, color: '#E8F4FF', type: 'ice' },
+      { id: 's3', name: '奶泡', height: 25, color: '#FAEBD7', type: 'foam' },
     ],
   },
   {
@@ -69,6 +70,8 @@ export const CUP_PRESETS: CupPreset[] = [
     cupBottomRadius: 28,
     layers: [
       { id: 'l1', name: '瑞纳冰基底', height: 45, color: '#8B4513', type: 'tea' },
+      { id: 'l-milk', name: '牛奶', height: 25, color: '#FFF8DC', type: 'milk' },
+      { id: 'l-ice', name: '冰块', height: 30, color: '#E8F4FF', type: 'ice' },
       { id: 'l2', name: '奶油顶', height: 25, color: '#FFFAF0', type: 'foam' },
     ],
   },
@@ -80,8 +83,10 @@ export const CUP_PRESETS: CupPreset[] = [
     cupTopRadius: 44,
     cupBottomRadius: 29,
     layers: [
-      { id: 'h1', name: '茶汤', height: 70, color: '#DAA520', type: 'tea' },
-      { id: 'h2', name: '芝士奶盖', height: 30, color: '#FFFACD', type: 'foam' },
+      { id: 'h1', name: '茶汤', height: 50, color: '#DAA520', type: 'tea' },
+      { id: 'h-milk', name: '牛奶', height: 25, color: '#FFF8DC', type: 'milk' },
+      { id: 'h-ice', name: '冰块', height: 30, color: '#E8F4FF', type: 'ice' },
+      { id: 'h2', name: '芝士奶盖', height: 28, color: '#FFFACD', type: 'foam' },
     ],
   },
   {
@@ -92,8 +97,9 @@ export const CUP_PRESETS: CupPreset[] = [
     cupTopRadius: 46,
     cupBottomRadius: 30,
     layers: [
-      { id: 'n1', name: '水果茶', height: 80, color: '#FF6347', type: 'tea' },
-      { id: 'n2', name: '果肉', height: 35, color: '#FFB6C1', type: 'topping' },
+      { id: 'n2', name: '果肉', height: 25, color: '#FFB6C1', type: 'topping' },
+      { id: 'n1', name: '水果茶', height: 70, color: '#FF6347', type: 'tea' },
+      { id: 'n-ice', name: '冰块', height: 30, color: '#E8F4FF', type: 'ice' },
     ],
   },
   {
@@ -104,8 +110,10 @@ export const CUP_PRESETS: CupPreset[] = [
     cupTopRadius: 43,
     cupBottomRadius: 28,
     layers: [
-      { id: 'c1', name: '奶茶', height: 65, color: '#DEB887', type: 'tea' },
-      { id: 'c2', name: '珍珠', height: 25, color: '#2F1810', type: 'topping' },
+      { id: 'c-pearl', name: '珍珠', height: 25, color: '#2F1810', type: 'topping' },
+      { id: 'c1', name: '奶茶', height: 60, color: '#DEB887', type: 'tea' },
+      { id: 'c-ice', name: '冰块', height: 30, color: '#E8F4FF', type: 'ice' },
+      { id: 'c2', name: '奶盖', height: 18, color: '#FFFACD', type: 'foam' },
     ],
   },
   {
@@ -116,8 +124,9 @@ export const CUP_PRESETS: CupPreset[] = [
     cupTopRadius: 48,
     cupBottomRadius: 32,
     layers: [
-      { id: 'm1', name: '柠檬水', height: 90, color: '#FFFACD', type: 'tea' },
-      { id: 'm2', name: '柠檬片', height: 30, color: '#FFD700', type: 'topping' },
+      { id: 'm2', name: '柠檬片', height: 20, color: '#FFD700', type: 'topping' },
+      { id: 'm1', name: '柠檬水', height: 75, color: '#FFFACD', type: 'tea' },
+      { id: 'm-ice', name: '冰块', height: 45, color: '#E8F4FF', type: 'ice' },
     ],
   },
 ];
@@ -152,7 +161,7 @@ export const useCupStore = create<CupState & CupActions>((set, get) => ({
   crossSectionMode: false,
   crossSectionLayer: null,
   selectedLayerId: null,
-  rotation: { x: 0.3, y: 0.5 },
+  rotation: { x: -0.4, y: 0.5 },
   zoom: 1,
 
   setPreset: (preset) => set({ currentPreset: preset }),
